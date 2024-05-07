@@ -7,7 +7,6 @@ jobs:
   job-CE:
     name: Edition CE
     runs-on: ubuntu-latest
-    if: github.event.inputs.ce == 'true'
     steps:
       - run: echo "CE"
       - name: Check previous release
