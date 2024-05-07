@@ -1,0 +1,12 @@
+name: Deploy Prod
+
+jobs:
+  job-CE:
+    name: Edition CE
+    runs-on: ubuntu-latest
+    if: github.event.inputs.ce == 'true'
+    steps:
+      - run: echo "CE"
+      - name: Check previous release
+        run: |
+          .github/checkPreviousChannelRelease.sh $MODULE_SOURCE_NAME ce $RELEASE_CHANNEL $MODULES_MODULE_TAG
