@@ -8,6 +8,7 @@ jobs:
     name: Edition CE
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: echo "CE"
       - name: Check previous release
         run: |
