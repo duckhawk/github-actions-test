@@ -14,4 +14,5 @@ jobs:
         run: |
           pwd
           ls -lah
-          ./checkPreviousChannelRelease.sh $MODULE_SOURCE_NAME ce $RELEASE_CHANNEL $MODULES_MODULE_TAG
+          chmod +x .github/checkPreviousChannelRelease.sh 
+          .github/checkPreviousChannelRelease.sh $MODULE_SOURCE_NAME ce $RELEASE_CHANNEL $MODULES_MODULE_TAG
