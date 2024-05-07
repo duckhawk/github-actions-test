@@ -12,5 +12,5 @@ jobs:
       - name: Check previous release
         run: |
           pwd
-          ls -l
+          ls -lah
           .github/checkPreviousChannelRelease.sh $MODULE_SOURCE_NAME ce $RELEASE_CHANNEL $MODULES_MODULE_TAG
